@@ -31,8 +31,8 @@ function handleError(worker) {
   var errorElm = document.getElementById('error');
   worker.postMessage({msg:'error'});
   worker.addEventListener('error', function(e){
-      console.log('ERROR ' + e.data);
-      errorElm.textContent =  e.data;
+      console.log('ERROR ' + JSON.stringify(e));
+      errorElm.textContent =  e.fileno + ' ' + e.message + ' '+ e.filename;
   });
 }
 
