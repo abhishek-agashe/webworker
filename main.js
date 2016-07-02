@@ -8,7 +8,7 @@
   startBtn.addEventListener('mouseup', function(e) {
     talkToWorker(worker);
   });
- startBtn.addEventListener('mouseup', fuunction(e) {
+  startBtn.addEventListener('mouseup', function(e) {
     handleError(worker);
  });
  terminateBtn.addEventListener('mouseup', function(e){
