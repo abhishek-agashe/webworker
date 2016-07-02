@@ -10,7 +10,7 @@
 
 function talkToWorker() {
 
-  var worker = mew Worker('worker1.js');
+  var worker = new Worker('worker1.js');
   var resultElm = document.getElementById('result');
   worker.postMessage({msg: 'dude', data:'I am main thread'});
   worker.addEventListener('message', function(e){
