@@ -29,7 +29,7 @@ function talkToWorker(worker) {
 
 function handleError(worker) {
   var errorElm = document.getElementById('error');
-  worker.postMessage({msg:'error',{data:{msg: 'error'}}});
+  worker.postMessage({msg:'error'});
   worker.addEventListener('error', function(e){
       console.log('ERROR ' + e.data);
       errorElm.textContent =  e.data;
