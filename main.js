@@ -23,6 +23,7 @@ function talkToWorker(worker) {
   worker.postMessage({msg: 'dude', data:'I am main thread'});
   worker.addEventListener('message', function(e){
     console.log('data coming from wroker', e.data);
+    console.log(window.localStorage.getItem('foo'));
     resultElm.inerHTML = e.data.message;  
   });
 }
