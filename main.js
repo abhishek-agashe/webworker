@@ -4,13 +4,16 @@
   var startBtn = document.getElementById('start-btn');
   var errorBtn = document.getElementById('error-btn');
   var terminateBtn = document.getElementById('terminate-btn');
-  var worker = new Worker('worker1.js');
-  setTimeout(function(){fetch('https://i.imgur.com/NruwA2a.gif').then(function(response){
+  navigator.serviceWorker.register('/worker.js').then(function(registration){
+    console.log('service worker registered...');
+    fetch('https://i.imgur.com/NruwA2a.gif').then(function(response){
     return response.blob();
   }).then(function(data){
     console.log(data);
   });
-  }, 5000);
+  }).catch(function(e){
+    console.log('something screwedup... ', e);
+  })
   startBtn.addEventListener('mouseup', function(e) {
     talkToWorker(worker);
   });
