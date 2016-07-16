@@ -6,7 +6,7 @@
   var terminateBtn = document.getElementById('terminate-btn');
   var worker = new Worker('worker1.js');
   fetch('https://i.imgur.com/NruwA2a.gif').then(function(response){
-    return response.json();
+    return response.blob();
   }).then(function(data){
     console.log(data);
   });
