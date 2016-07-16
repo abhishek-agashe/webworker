@@ -4,7 +4,7 @@
   var startBtn = document.getElementById('start-btn');
   var errorBtn = document.getElementById('error-btn');
   var terminateBtn = document.getElementById('terminate-btn');
-  navigator.serviceWorker.register('webworker/worker1.js').then(function(registration){
+  navigator.serviceWorker.register('worker1.js').then(function(registration){
     console.log('service worker registered...');
     fetch('https://i.imgur.com/NruwA2a.gif').then(function(response){
     return response.blob();
