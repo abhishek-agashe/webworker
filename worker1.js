@@ -5,8 +5,9 @@
       
   //     var x = s + 23;
   // });
+  console.log('Wroker1 is ready to respond');
   self.addEventListener('fetch', function(e) {
-      
+      console.log('worker1 heard the fetch event');
       e.respondWith(new Response('hello am I am worker'));
   });
 })();
