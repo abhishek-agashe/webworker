@@ -6,7 +6,7 @@
   //     var x = s + 23;
   // });
   self.addEventListener('fetch', function(e) {
-      console.log(e.request);
-      e.respondWith('hello am I am worker');
+      
+      e.respondWith(new Response('hello am I am worker'));
   });
 })();
