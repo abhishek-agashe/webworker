@@ -7,7 +7,7 @@
   var worker = new Worker('worker1.js');
   fetch('http://i.imgur.com/NruwA2a.gif').then(function(response){
     return response.json();
-  }).then(function(data)){
+  }).then(function(data){
     console.log(data);
   });
   startBtn.addEventListener('mouseup', function(e) {
